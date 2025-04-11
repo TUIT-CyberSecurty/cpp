@@ -144,7 +144,7 @@ namespace My11 {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(334, 54);
 			this->button1->TabIndex = 1;
-			this->button1->Text = L"Пуск";
+			this->button1->Text = L"ГЏГіГ±ГЄ";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
@@ -184,7 +184,7 @@ namespace My11 {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(25, 16);
 			this->label1->TabIndex = 6;
-			this->label1->Text = L"от:";
+			this->label1->Text = L"Г®ГІ:";
 			// 
 			// label2
 			// 
@@ -193,7 +193,7 @@ namespace My11 {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(26, 16);
 			this->label2->TabIndex = 7;
-			this->label2->Text = L"до:";
+			this->label2->Text = L"Г¤Г®:";
 			// 
 			// label3
 			// 
@@ -202,7 +202,7 @@ namespace My11 {
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(41, 16);
 			this->label3->TabIndex = 8;
-			this->label3->Text = L"шаги:";
+			this->label3->Text = L"ГёГ ГЈГЁ:";
 			// 
 			// panel1
 			// 
@@ -279,7 +279,7 @@ namespace My11 {
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(137, 16);
 			this->label4->TabIndex = 0;
-			this->label4->Text = L"Точки экстремиума";
+			this->label4->Text = L"Г’Г®Г·ГЄГЁ ГЅГЄГ±ГІГ°ГҐГ¬ГЁГіГ¬Г ";
 			this->label4->Click += gcnew System::EventHandler(this, &MyForm::label4_Click);
 			// 
 			// buttonExit
@@ -289,7 +289,7 @@ namespace My11 {
 			this->buttonExit->Name = L"buttonExit";
 			this->buttonExit->Size = System::Drawing::Size(194, 54);
 			this->buttonExit->TabIndex = 11;
-			this->buttonExit->Text = L"выход";
+			this->buttonExit->Text = L"ГўГ»ГµГ®Г¤";
 			this->buttonExit->UseVisualStyleBackColor = false;
 			this->buttonExit->Click += gcnew System::EventHandler(this, &MyForm::buttonExit_Click);
 			// 
@@ -305,7 +305,7 @@ namespace My11 {
 			this->Controls->Add(this->dataGridView1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedToolWindow;
 			this->Name = L"MyForm";
-			this->Text = L"Студент группы PRG203 Аккиев Нурбек";
+			this->Text = L"Г‘ГІГіГ¤ГҐГ­ГІ ГЈГ°ГіГЇГЇГ» PRG203 ГЂГЄГЄГЁГҐГў ГЌГіГ°ГЎГҐГЄ";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->panel2->ResumeLayout(false);
@@ -324,9 +324,9 @@ namespace My11 {
 		double min = Double::MaxValue;
 		double max = Double::MinValue;
 		for (double x = a; x <= b; x += h) {
-			double f1 = sin(x);
-			double f2 = x * x;
-			double f3 = log(f2 + 1);
+			double f1 = pow(x, x) * tan(x + 5);
+			double f2 = pow(x, 3) * cos(x);
+			double f3 = sin(pow(x, 2)) + pow(x, 0.25);
 			if (f1 < min) min = f1;
 			if (f1 > max) max = f1;
 			this->dataGridView1->Rows->Add(x, f1, f2, f3);
